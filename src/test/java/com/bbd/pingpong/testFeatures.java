@@ -24,6 +24,7 @@ public class testFeatures {
                 () -> {
                     throw new IllegalArgumentException("a message");
                 });
+        System.out.println("Exception message was "+exception.getMessage() + " of type "+exception.getClass().getName());
         assertEquals("a message", exception.getMessage());
     }
 }
